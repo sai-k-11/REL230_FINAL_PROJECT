@@ -1,41 +1,21 @@
-/* ==========================================================================
-   INK GAME STYLESHEET - FULL THEME: THE DARK TEMPLE (CENTERED)
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. FONT IMPORTS
-   'Cinzel': For majestic, spiritual Headings.
-   'Lato': For clean, readable body text.
-   -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-
-/* --------------------------------------------------------------------------
-   2. GLOBAL BODY & SCROLL SETTINGS
-   -------------------------------------------------------------------------- */
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    background: rgb(20, 25, 35);          /* Deep Slate/Charcoal Background */
-    color: #eef3ff;                       /* Softer, lighter text color */
+    background: rgb(20, 25, 35);
+    color: #eef3ff;
     margin: 0;
     padding: 0;
-    overflow: hidden;                     /* Ink handles scrolling inside the container */
+    overflow: hidden;
 }
 
-/* Smooth color transitions if theme switching is enabled */
 @media screen and (prefers-reduced-motion: no-preference) {
     body.switched {
         transition: color 0.6s, background-color 0.6s;
     }
 }
 
-
-/* --------------------------------------------------------------------------
-   3. LAYOUT & CONTAINERS
-   -------------------------------------------------------------------------- */
-
-/* The outer frame - critical for iOS scrolling support */
 .outerContainer {
     position: absolute;
     display: block;
@@ -48,17 +28,17 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    margin-top: 24px; /* Space for the header bar */
+    margin-top: 24px;
 }
 
-/* Mobile Adjustment for Outer Container */
+
 @media screen and (max-width: 980px) {
     .outerContainer {
         margin-top: 44px;
     }
 }
 
-/* The main content column */
+
 .container {
     display: block;
     max-width: 700px;
@@ -67,10 +47,9 @@ body {
     padding-top: 4em;
     min-height: 100vh;
     background: rgb(20, 25, 35);
-    text-align: center;   /* Center everything by default */
+    text-align: center;
 }
 
-/* Transition for container background */
 @media screen and (prefers-reduced-motion: no-preference) {
     .switched .container {
         transition: background-color 0.6s;
@@ -78,16 +57,11 @@ body {
 }
 
 
-/* --------------------------------------------------------------------------
-   4. TYPOGRAPHY (HEADINGS & TEXT)
-   -------------------------------------------------------------------------- */
-
-/* Main Title */
 h1 {
     font-family: 'Cinzel', serif;
     font-size: 42pt;
     text-align: center;
-    color: #f39c12; /* Saffron Gold */
+    color: #f39c12;
     margin: 0 0 20px 0;
     padding: 0;
     text-transform: uppercase;
@@ -95,34 +69,33 @@ h1 {
     text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
 }
 
-/* Subtitles / Byline */
+
 h2 {
     font-family: 'Cinzel', serif;
     font-size: 16pt;
     font-style: italic;
     font-weight: lighter;
     text-align: center;
-    color: #aeb6bf; /* Softer slate */
+    color: #aeb6bf;
     margin-bottom: 30px;
 }
 
-/* Standard Paragraph Text */
+
 p {
     font-size: 16pt;
     line-height: 1.8em;
-    color: #eef3ff;    /* Light, clear text */
+    color: #eef3ff;
     margin-bottom: 1.5em;
     font-weight: 300;
     text-align: center;
 }
 
-/* Bold Text */
+
 strong {
-    color: #f5c469;    /* Warm gold highlight */
+    color: #f5c469;
     font-weight: 700;
 }
 
-/* Italic Text (Bylines, etc) */
 .byline {
     font-style: italic;
     color: #aeb6bf;
@@ -131,9 +104,6 @@ strong {
 }
 
 
-/* --------------------------------------------------------------------------
-   5. IMAGES
-   -------------------------------------------------------------------------- */
 img {
     display: block;
     margin: 30px auto; /* Centers the image */
@@ -145,17 +115,10 @@ img {
 }
 
 
-/* --------------------------------------------------------------------------
-   6. CUSTOM CLASSES: SITUATIONS & FEEDBACK
-   (These correspond to your Ink Tags: # CLASS: situation_title, etc.)
-   -------------------------------------------------------------------------- */
-
-/* SITUATION TITLES (# CLASS: situation_title)
-   e.g. "SITUATION 1: THE HEAVY BAGS" */
 .situation_title {
     font-family: 'Cinzel', serif;
     font-size: 24pt;
-    color: #ffb347;         /* Warm amber for situation names */
+    color: #ffb347;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
@@ -164,13 +127,11 @@ img {
     margin-top: 60px;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #5d6d7e; /* Separator line */
+    border-bottom: 2px solid #5d6d7e;
 }
 
-/* GREAT / 2-POINT FEEDBACK (# CLASS: feedback_great)
-   e.g. "You choose full responsibility and kindness." */
 .feedback_great {
-    background-color: rgba(46, 204, 113, 0.20); /* Slightly stronger green */
+    background-color: rgba(46, 204, 113, 0.20);
     border-left: 6px solid #2ecc71;
     padding: 18px 20px;
     margin: 18px auto 28px auto;
@@ -178,15 +139,14 @@ img {
     max-width: 620px;
     
     font-style: italic;
-    color: #d4efdf;   /* Very light green text */
+    color: #d4efdf;
     font-size: 15pt;
     line-height: 1.6em;
     text-align: left;
 }
 
-/* GOOD / 1-POINT FEEDBACK (# CLASS: feedback_good) */
 .feedback_good {
-    background-color: rgba(39, 174, 96, 0.15); /* Transparent Green */
+    background-color: rgba(39, 174, 96, 0.15);
     border-left: 5px solid #27ae60;
     padding: 18px 20px;
     margin: 18px auto 28px auto;
@@ -200,9 +160,8 @@ img {
     text-align: left;
 }
 
-/* BAD / 0-POINT FEEDBACK (# CLASS: feedback_bad) */
 .feedback_bad {
-    background-color: rgba(192, 57, 43, 0.15); /* Transparent Red */
+    background-color: rgba(192, 57, 43, 0.15);
     border-left: 5px solid #c0392b;
     padding: 18px 20px;
     margin: 18px auto 28px auto;
@@ -210,67 +169,55 @@ img {
     max-width: 620px;
     
     font-style: italic;
-    color: #f5b7b1;   /* Light red text */
+    color: #f5b7b1;
     font-size: 15pt;
     line-height: 1.6em;
     text-align: left;
 }
 
-
-/* --------------------------------------------------------------------------
-   7. INTERACTIVE ELEMENTS (LINKS & CHOICES)
-   -------------------------------------------------------------------------- */
-
-/* Choice Container */
 .choice {
     text-align: center;
     margin-top: 15px;
     line-height: 1.7em;
 }
 
-/* Spacing between choices */
 :not(.choice)+.choice {
     padding-top: 0.5em;
 }
 
-/* Choice Links (The Buttons) */
 .choice a {
-    display: block;                      /* Makes the entire block clickable */
+    display: block;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 15pt;
-    color: #5dade2;                      /* Bright Blue */
+    color: #5dade2;
     text-decoration: none;
     
-    /* Button Styling */
     padding: 12px 15px;
     border: 1px solid rgba(93, 173, 226, 0.3); 
     border-radius: 6px;
     background: rgba(0,0,0,0.35);
     transition: all 0.3s ease;
     
-    /* Center the button block, but keep text inside left-aligned */
     max-width: 620px;
     margin: 0 auto;
     text-align: left;
 }
 
-/* Choice Hover State */
 .choice a:hover {
-    color: #1abc9c; /* Teal */
+    color: #1abc9c;
     background-color: rgba(255, 255, 255, 0.08); 
     border-color: #1abc9c;
-    padding-left: 20px; /* Slide effect */
+    padding-left: 20px;
 }
 
-/* Transitions for links */
+
 @media screen and (prefers-reduced-motion: no-preference) {
     a {
         transition: color 0.3s, background 0.3s, transform 0.3s;
     }
 }
 
-/* Unclickable links (if used in logic) */
 .unclickable {
     font-weight: 700;
     color: #566573;
@@ -281,11 +228,6 @@ img {
 }
 
 
-/* --------------------------------------------------------------------------
-   8. SYSTEM UI (FOOTER, END, CONTROLS)
-   -------------------------------------------------------------------------- */
-
-/* "Written in Ink" Footer Bar */
 .written-in-ink {
     z-index: 3;
     font-size: 8pt;
@@ -298,7 +240,7 @@ img {
     display: block;
     width: 100%;
     
-    background: rgb(20, 25, 35); /* Matches Body */
+    background: rgb(20, 25, 35);
     color: #566573;
     border-bottom: 1px solid #2c3e50;
     
@@ -314,7 +256,6 @@ img {
     text-decoration: none;
 }
 
-/* "The End" text */
 .end {
     text-align: center;
     font-family: 'Cinzel', serif;
@@ -327,7 +268,6 @@ img {
     margin-top: 40px;
 }
 
-/* Undo / Restart Controls (Top Right) */
 #controls {
     z-index: 4;
     font-size: 9pt;
@@ -352,7 +292,6 @@ img {
     color: #e0e6ed;
 }
 
-/* Disabled controls */
 #controls [disabled] {
     color: #2c3e50;
     cursor: default;
@@ -363,7 +302,6 @@ img {
     color: #2c3e50;
 }
 
-/* Mobile Controls Position */
 @media screen and (max-width: 980px) {
     #controls {
         z-index: 2;
@@ -377,11 +315,6 @@ img {
     }
 }
 
-
-/* --------------------------------------------------------------------------
-   9. ANIMATION HELPERS (Fades)
-   -------------------------------------------------------------------------- */
-
 .container .hide {
     opacity: 0.0;
 }
@@ -390,7 +323,6 @@ img {
     display: none;
 }
 
-/* Fade in new content */
 .container>* {
     opacity: 1.0;
 }
@@ -401,10 +333,6 @@ img {
     }
 }
 
-
-/* --------------------------------------------------------------------------
-   10. DARK MODE OVERRIDES
-   -------------------------------------------------------------------------- */
 body.dark {
     background: rgb(20, 25, 35);
     color: #eef3ff;
@@ -430,10 +358,9 @@ body.dark {
     color: #f1c40f;
 }
 
-/* ENDING RESULT BOX (for religion outcome) */
 .ending_result {
-    background-color: rgba(255, 255, 255, 0.08); /* Soft glow */
-    border: 2px solid #f1c40f;                  /* Gold border */
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid #f1c40f;
     padding: 25px 30px;
     margin: 40px auto 60px auto;
     border-radius: 10px;
@@ -441,18 +368,17 @@ body.dark {
     
     font-family: 'Cinzel', serif;
     font-size: 18pt;
-    color: #f9e79f;     /* Warm golden text */
+    color: #f9e79f;
     text-align: center;
     line-height: 1.8em;
-    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4); /* Gold glow */
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
 }
 
-/* SCORE LINE (e.g. "Your total score is:") */
 .score_line {
     font-family: 'Cinzel', serif;
     font-size: 20pt;
     font-weight: bold;
-    color: #58d68d; /* Spiritual green */
+    color: #58d68d;
     text-align: center;
     margin: 20px auto 30px auto;
     text-shadow: 0 0 10px rgba(88, 214, 141, 0.4);
